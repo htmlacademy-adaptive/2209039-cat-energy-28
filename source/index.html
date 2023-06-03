@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page-body">
+    <div class="page-body__wrapper">
+      <header class="main-header">
+        <div class="main-header__wrapper">
+            <a class="main-header__logo" href="./index.html">
+              <img src="#" alt="Логотип.">
+              <img src="#" alt="CAT ENERGY">
+            </a>
+            <button class="main-header__toggle" type="button">
+              <span class="visually-hidden">Меню</span>
+            </button>
+          <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+            <div class="main-navigation__wrapper">
+              <ul class="main-navigation__list">
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link main-navigation__link--current" href="./index.html">Главная</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="./catalog.html">каталог продукции</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="./form.html">подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
   </body>
 </html>

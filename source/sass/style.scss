@@ -1,1 +1,9 @@
-// Начните писать стили здесь
+// базовые стили, шрифты, миксины, переменные
+@use "./base/base";
+@use "./base/fonts.scss";
+@use "./variables.scss";
+@use "./mixins.scss";
+
+// блоки
+@use "./blocks/main-header.scss";
+@use "./blocks/main-navigation.scss";

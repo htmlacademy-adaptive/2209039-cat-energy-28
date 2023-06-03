@@ -1,0 +1,91 @@
+@use "../mixins.scss" as m;
+@use "../variables.scss" as v;
+
+.main-navigation__list {
+  @include m.list-reset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 34px;
+  }
+}
+
+.main-navigation__item {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    width: fit-content;
+    padding: 0;
+  }
+}
+
+.main-navigation__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  top: 0;
+  left: 0;
+}
+
+.main-navigation__link {
+  @include m.link-reset;
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  min-height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: v.$desktop-width) {
+    color: v.$background;
+    background-color: v.$decorate-color;
+  }
+}
+
+.main-navigation__link:hover,
+.main-navigation__link:focus-visible {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+  outline: none;
+}
+
+.main-navigation__link:active {
+  opacity: 1;
+}
+
+.main-navigation__link:active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: v.$decorate-color;
+  top: calc(50% + 18px);
+}
+
+.main-navigation__link--current::before {
+  @media (min-width: v.$tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: v.$decorate-color;
+    top: calc(50% + 18px);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    background-color: v.$background;
+  }
+}

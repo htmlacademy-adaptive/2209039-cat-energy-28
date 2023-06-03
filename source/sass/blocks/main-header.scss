@@ -1,0 +1,39 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+
+.main-header {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.main-header__wrapper {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.main-header__logo {
+  min-height: 66px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 0 20px;
+}
+
+.main-header__toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
