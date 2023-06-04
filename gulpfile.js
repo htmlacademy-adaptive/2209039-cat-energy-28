@@ -4,6 +4,8 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import svgo from 'svgo';
+import svgstore from 'svgstore';
 
 // Styles
 
@@ -16,6 +18,17 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// SVG
+
+export const sprite = () => {
+  return gulp.src('./source/img/icons/*.svg')
+   .pipe(svgstore({
+    inlineSvg: true
+   }))
+   .pipe(rename('sprite.svg'))
+   .pipe(gulp.dest('build/img', { sourcemaps: '.' }))
 }
 
 // Server
@@ -39,7 +52,10 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
 export default gulp.series(
-  styles, server, watcher
-);
+  styles,
+  sprite,
+  gulp.series(
+    server,
+    watcher
+));
