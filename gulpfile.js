@@ -5,7 +5,8 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import svgo from 'svgo';
-import svgstore from 'svgstore';
+import svgstore from 'gulp-svgstore';
+import rename from 'gulp-rename';
 
 // Styles
 
@@ -25,10 +26,11 @@ export const styles = () => {
 export const sprite = () => {
   return gulp.src('./source/img/icons/*.svg')
    .pipe(svgstore({
-    inlineSvg: true
+    inLineSvg: true
    }))
    .pipe(rename('sprite.svg'))
-   .pipe(gulp.dest('build/img', { sourcemaps: '.' }))
+   .pipe(gulp.dest('build/img'))
+   .pipe(gulp.dest('source/img'))
 }
 
 // Server

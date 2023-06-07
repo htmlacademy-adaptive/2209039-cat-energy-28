@@ -26,14 +26,39 @@
   align-items: center;
   gap: 56px;
   padding: 0 20px;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__toggle {
   position: absolute;
+  width: 24px;
+  height: 24px;
   top: 22px;
   right: 20px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: v.$tablet-width) {
     display: none;
   }
+}
+
+.main-header__toggle--closed {
+  background-image: url("../../img/toggle-open.svg");
+}
+
+.main-header__toggle--opened {
+  background-image: url("../../img/toggle-close.svg");
 }

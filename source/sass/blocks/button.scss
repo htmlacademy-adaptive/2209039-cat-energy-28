@@ -1,0 +1,28 @@
+@use "../variables.scss" as v;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  min-height: 40px;
+  color: v.$background;
+  background-color: v.$decorate-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #5eaa2f;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(v.$background, 0.3);
+  }
+}

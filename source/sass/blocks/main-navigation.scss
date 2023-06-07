@@ -1,8 +1,31 @@
 @use "../mixins.scss" as m;
 @use "../variables.scss" as v;
 
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation--closed .main-navigation__wrapper {
+  @media (max-width: v.$max-phone) {
+    display: none;
+  }
+}
+
+.main-navigation--opened .main-navigation__wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: v.$background;
+}
+
+.main-navigation--nojs .main-navigation__wrapper {
+  display: block;
+}
+
 .main-navigation__list {
   @include m.list-reset;
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;

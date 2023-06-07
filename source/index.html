@@ -10,13 +10,21 @@
     <div class="page-body__wrapper">
       <header class="main-header">
         <div class="main-header__wrapper">
-            <a class="main-header__logo" href="./index.html">
-              <img src="#" alt="Логотип.">
-              <img src="#" alt="CAT ENERGY">
-            </a>
-            <button class="main-header__toggle" type="button">
-              <span class="visually-hidden">Меню</span>
-            </button>
+          <a class="main-header__logo" href="./index.html">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="./img/sprite.svg#logo-desktop" width="70" height="60">
+              <source media="(min-width: 768px)" srcset="./img/sprite.svg#logo-tablet" width="60" height="50">
+              <svg class="main-header__logo-icon" width="33" height="38" alt="Логотип.">
+                <use href="./img/sprite.svg#logo-mobile"></use>
+              </svg>
+            </picture>
+            <svg class="main-header__logo-icon" width="101" height="18" alt="CAT ENERGY.">
+              <use href="./img/sprite.svg#logo-text"></use>
+            </svg>
+          </a>
+          <button class="main-header__toggle main-header__toggle--closed" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
           <nav class="main-navigation main-navigation--closed main-navigation--nojs">
             <div class="main-navigation__wrapper">
               <ul class="main-navigation__list">
@@ -34,6 +42,20 @@
           </nav>
         </div>
       </header>
+      <main class="main-contauner main-index">
+        <h1 class="visually-hidden">CAT ENERGY. Главная страница.</h1>
+        <section class="promo-section">
+          <h2 class="promo-section__headline">Функциональное питание для котов</h2>
+          <span class="promo-section__slogan">Занялся собой? Займись котом!</span>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/index/index-can-dekstop.png, ./img/index/index-can-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="./img/index/index-can-tablet.png, ./img/index/index-can-tablet@2x.png 2x" width="709" height="609">
+            <img src="./img/index/index-can-mobile.png" srcset="./img/index/index-can-mobile@2x.png 2x" width="280" height="270" alt="Кошачье питание CAT ENERGY.">
+          </picture>
+          <a class="button" href="./catalog.html">подобрать программу</a>
+        </section>
+      </main>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
