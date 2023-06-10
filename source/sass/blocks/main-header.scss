@@ -13,19 +13,36 @@
   flex-direction: column;
 
   @media (min-width: v.$tablet-width) {
+    padding: 0 30px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 55px 110px 0;
+    z-index: 1;
+  }
+}
+
+.main-header__topline {
+  min-height: 61px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: v.$max-phone) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    justify-content: baseline;
+  }
 }
 
 .main-header__logo {
-  min-height: 66px;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 56px;
-  padding: 0 20px;
+  display: inline-block;
   transition-duration: 0.3s;
 
   &:hover,
@@ -39,12 +56,19 @@
   }
 }
 
+.main-header__logo-icon {
+  object-fit: fill;
+}
+
+.main-header__logo-text {
+  @media (min-width: v.$tablet-width) {
+    margin-left: 13px;
+  }
+}
+
 .main-header__toggle {
-  position: absolute;
   width: 24px;
   height: 24px;
-  top: 22px;
-  right: 20px;
   background-color: transparent;
   border: none;
   background-position: center;

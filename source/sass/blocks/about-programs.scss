@@ -1,0 +1,15 @@
+@use "../variables.scss" as v;
+
+.about-programs {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 49px;
+}
+
+.about-programs__card {
+  margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 30px;
+  }
+}

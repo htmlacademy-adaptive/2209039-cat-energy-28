@@ -7,6 +7,8 @@ import browser from 'browser-sync';
 import svgo from 'svgo';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -19,6 +21,22 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin( { collapseWhitespace: true }))
+  .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
 }
 
 // SVG
@@ -49,10 +67,22 @@ const server = (done) => {
 
 // Watcher
 
+const reload = (done) => {
+  browser.reload();
+  done();
+};
+gulp.watch("source/*.html", gulp.series(html, reload));
+
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
+
+// const watcher = () => {
+//   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+//   gulp.watch('source/*.html').on('change', browser.reload);
+// }
 
 export default gulp.series(
   styles,

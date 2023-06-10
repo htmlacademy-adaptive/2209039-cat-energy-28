@@ -1,6 +1,8 @@
 @use "../variables.scss" as v;
 
 .button {
+  font-size: 16px;
+  line-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,5 +26,26 @@
   &:active {
     background-color: #5eaa2f;
     color: rgba(v.$background, 0.3);
+  }
+}
+
+.button--promo {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: v.$max-phone) {
+    max-width: 280px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 244px;
+    min-height: 54px;
+    margin-left: 91px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 80px;
   }
 }
