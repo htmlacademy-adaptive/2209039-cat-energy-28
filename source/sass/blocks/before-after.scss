@@ -1,0 +1,56 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.before-after {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0;
+  }
+}
+
+.before-after__slider {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.before-after__button {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50%);
+  cursor: e-resize;
+}
+
+.before-after__button::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: v.$mask-color;
+  border-radius: 2px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.before-after__button::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  mask-image: url("../../img/stack.svg#slider-button");
+  top: 50%;
+  left: 0;
+  transform: translate(-34%, -50%);
+  background-color: v.$mask-color;
+}

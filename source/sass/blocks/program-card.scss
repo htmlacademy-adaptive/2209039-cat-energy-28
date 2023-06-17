@@ -4,10 +4,15 @@
 .program-card {
   position: relative;
   padding: 20px;
+  padding-top: 30px;
   background-color: v.$background-secondary;
 
   @media (min-width: v.$tablet-width) {
     padding: 77px 62px 57px 52px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: calc(50% - 40px);
   }
 }
 
@@ -18,8 +23,8 @@
   height: 50px;
   border-radius: 50%;
   background-color: v.$decorate-color;
-  top: 24px;
-  left: 22px;
+  top: 23px;
+  left: 23px;
 
   @media (min-width: v.$tablet-width) {
     width: 200px;
@@ -27,6 +32,14 @@
     top: 92px;
     right: 62px;
     left: auto;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    right: auto;
+    left: 52px;
   }
 }
 
@@ -41,15 +54,47 @@
   height: 50px;
   mask-image: url("../../img/stack.svg#slim-icon");
   top: 21px;
-  left: 29px;
+  left: 23px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    right: 92px;
+    left: auto;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    right: auto;
+    left: 67px;
+  }
 }
 
 .program-card--weight::after {
   width: 67px;
   height: 28px;
   mask-image: url("../../img/stack.svg#weight-icon");
-  top: 35px;
+  top: 32px;
   left: 13px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 268px;
+    height: 112px;
+    top: 135px;
+    right: 28px;
+    left: auto;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    right: auto;
+    left: 33px;
+  }
 }
 
 
@@ -59,7 +104,7 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  margin-left: 91px;
+  margin-left: 71px;
   margin-bottom: 29px;
 
   @media (min-width: v.$tablet-width) {
@@ -68,13 +113,18 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
 }
 
 .program-card__text {
   @include m.indent-reset;
   position: relative;
   font-family: "Lato", "Arial", sans-serif;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
 
   @media (min-width: v.$tablet-width) {
     font-size: 16px;
@@ -82,6 +132,11 @@
     max-width: 340px;
     margin-bottom: 52px;
     padding: 0;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 456px;
+    margin-bottom: 27px;
   }
 }
 
@@ -113,6 +168,12 @@
   @media (min-width: v.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 53px;
+  }
+
+  &:active {
+    transition-duration: 0.3s;
+    opacity: 0.3;
   }
 }
 
@@ -121,9 +182,19 @@
   position: absolute;
   width: 32px;
   height: 12px;
-  mask-image: url("../../img/sprite.svg#arrow-short ");
+  mask-image: url("../../img/stack.svg#arrow-short");
   background-color: v.$main-text;
-  left: 102px;
-  top: 0;
+  left: 96px;
+  top: 50%;
   bottom: 0;
+  transform: translateY(-50%);
+}
+
+.program-card__link:focus-visible {
+  outline: none;
+}
+
+.program-card__link:hover::before,
+.program-card__link:focus-visible::before {
+  mask-image: url("../../img/stack.svg#arrow-long");
 }

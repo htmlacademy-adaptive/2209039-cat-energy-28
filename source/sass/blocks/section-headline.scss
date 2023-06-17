@@ -1,0 +1,26 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.section-headline {
+  @include m.indent-reset;
+  margin-bottom: 39px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+}
+
+.section-headline--example {
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 146px;
+  }
+}

@@ -9,6 +9,7 @@ import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
+import { stacksvg } from "gulp-stacksvg"
 
 // Styles
 
@@ -51,6 +52,14 @@ export const sprite = () => {
    .pipe(gulp.dest('source/img'))
 }
 
+const stack = () => {
+  return gulp.src([
+    'source/img/masks/*.svg'])
+    .pipe(stacksvg({ stack }))
+    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('source/img'));
+}
+
 // Server
 
 const server = (done) => {
@@ -87,6 +96,7 @@ const watcher = () => {
 export default gulp.series(
   styles,
   sprite,
+  stack,
   gulp.series(
     server,
     watcher

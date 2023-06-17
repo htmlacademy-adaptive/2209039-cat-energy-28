@@ -1,0 +1,61 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.example {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: v.$section-bg;
+
+  @media (min-width: v.$tablet-width) {
+    background: linear-gradient(to bottom, v.$background 0 60%, v.$section-bg 60% 100%);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    background: linear-gradient(to bottom, v.$background 0 25%, v.$section-bg 25% 100%);
+  }
+}
+
+.example__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 25px 20px 36px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 43px 30px 101px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 71px 110px 75px;
+  }
+}
+
+.example__text {
+  @include m.indent-reset;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+  color: v.$secondary-text;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__stats {
+  margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 99px;
+  }
+}

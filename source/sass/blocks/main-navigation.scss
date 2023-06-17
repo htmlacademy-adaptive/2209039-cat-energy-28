@@ -3,6 +3,11 @@
 
 .main-navigation {
   position: relative;
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 50%;
+    padding-left: 30px;
+  }
 }
 
 .main-navigation--closed .main-navigation__wrapper {

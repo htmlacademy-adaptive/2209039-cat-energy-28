@@ -14,7 +14,6 @@ html {
   line-height: 18px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -39,11 +38,4 @@ html {
 img {
   max-width: 100%;
   object-fit: contain;
-}
-
-*:hover,
-*:active,
-*:focus,
-*:focus-visible {
-  transition-duration: 0.3;
 }
