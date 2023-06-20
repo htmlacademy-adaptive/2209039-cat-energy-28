@@ -49,3 +49,17 @@
     margin-left: 80px;
   }
 }
+
+.button--more {
+  background-color: v.$background-secondary;
+  color: v.$secondary-text;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(v.$secondary-text, 0.3);
+  }
+}

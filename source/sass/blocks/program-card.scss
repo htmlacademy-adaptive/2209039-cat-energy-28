@@ -115,7 +115,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    margin-left: 214px;
+    margin-left: 161px;
     margin-bottom: 73px;
   }
 }
@@ -136,7 +136,7 @@
 
   @media (min-width: v.$desktop-width) {
     max-width: 456px;
-    margin-bottom: 27px;
+    margin-bottom: 0;
   }
 }
 
@@ -171,6 +171,10 @@
     margin-top: 53px;
   }
 
+  @media (min-width: v.$tablet-width) {
+    margin-top: 27px;
+  }
+
   &:active {
     transition-duration: 0.3s;
     opacity: 0.3;
@@ -188,6 +192,10 @@
   top: 50%;
   bottom: 0;
   transform: translateY(-50%);
+
+  @media (min-width: v.$tablet-width) {
+    left: 130px;
+  }
 }
 
 .program-card__link:focus-visible {

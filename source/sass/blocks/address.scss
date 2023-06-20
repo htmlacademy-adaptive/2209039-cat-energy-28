@@ -10,15 +10,16 @@
   background-color: v.$background;
 
   @media (min-width: v.$tablet-width) {
-    padding: 56px 70px;
+    padding: 59px 70px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: v.$desktop-width) {
     position: absolute;
-    padding: 56px 80px;
+    padding: 58px 77px;
     width: 565px;
     top: 95px;
-    left: 50%;
+    left: 49%;
     transform: translateX(-105%);
     z-index: 2;
   }
@@ -48,12 +49,16 @@
 
   @media (min-width: v.$tablet-width) {
     font-size: 16px;
-    text-align: end;
+    text-align: right;
     max-width: 160px;
 
-    &--city {
+    &-city {
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 18px;
     }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    text-align: left;
   }
 }

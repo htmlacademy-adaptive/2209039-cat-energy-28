@@ -1,0 +1,120 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.food-card {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+  top: 0;
+  left: 0;
+}
+
+.food-card:last-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+  bottom: 0;
+  left: 0;
+}
+
+.food-card--show-more {
+  flex-direction: column;
+  align-items: center;
+}
+
+.food-card__image {
+  margin: 13px 36px;
+
+  &--big {
+    margin: 10px 28px;
+  }
+}
+
+.food-card__name {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  max-width: 76px;
+  margin-bottom: 14px;
+}
+
+.food-card__name--more {
+  @include m.link-reset;
+  position: relative;
+  max-width: 100%;
+  padding-top: 78px;
+  padding-bottom: 8px;
+}
+
+.food-card__name--more::before,
+.food-card__name--more::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d3d3d3;
+}
+
+.food-card__name--more::before {
+  transform: rotate(180deg);
+}
+
+.food-card__name--more::after {
+  transform: rotate(90deg);
+}
+
+.food-card__name--more:hover::before {
+  transform: rotate(360deg);
+  transition-duration: 0.3s;
+}
+
+.food-card__name--more:hover::after {
+  transform: rotate(270deg);
+  transition-duration: 0.3s;
+}
+
+.food-card__poroperties {
+  @include m.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 140px;
+  margin-bottom: 22px;
+}
+
+.food-card__feature {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  width: 50%;
+}
+
+.food-card__feature--more {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 21px;
+}
+
+.food-card__value {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  width: 50%;
+  margin: 0;
+}

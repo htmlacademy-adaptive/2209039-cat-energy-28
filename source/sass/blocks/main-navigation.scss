@@ -5,7 +5,7 @@
   position: relative;
 
   @media (min-width: v.$desktop-width) {
-    max-width: 50%;
+    max-width: 60%;
     padding-left: 30px;
   }
 }
@@ -96,6 +96,10 @@
     color: v.$background;
     font-size: 20px;
     line-height: 30px;
+
+    &--secondary {
+      color: v.$main-text;
+    }
   }
 }
 
@@ -137,5 +141,16 @@
   @media (min-width: v.$desktop-width) {
     background-color: v.$background;
     top: calc(50% + 20px);
+  }
+}
+
+.main-navigation__link--current-secondary::before {
+  @media (min-width: v.$tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: v.$decorate-color;
+    top: calc(50% + 18px);
   }
 }

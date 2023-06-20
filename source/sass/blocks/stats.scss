@@ -8,6 +8,10 @@
   gap: 32px;
   row-gap: 35px;
 
+  @media (max-width: v.$max-phone) {
+    justify-content: center;
+  }
+
   @media (min-width: v.$tablet-width) {
     gap: 42px;
     align-items: center;
@@ -68,6 +72,7 @@
     line-height: 14px;
     max-width: 114px;
     background-color: v.$background;
+    bottom: 1px;
   }
 
   @media (min-width: v.$desktop-width) {
@@ -91,6 +96,7 @@
 
   @media (min-width: v.$tablet-width) {
     font-size: 20px;
+    line-height: 30px;
     text-align: end;
     max-width: 174px;
     margin-left: auto;

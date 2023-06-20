@@ -42,7 +42,7 @@
           </nav>
         </div>
       </header>
-      <main class="main-contauner main-index">
+      <main class="main-container main-index">
         <h1 class="visually-hidden">CAT ENERGY. Главная страница.</h1>
         <section class="promo-section">
           <div class="promo-section__wrapper">
@@ -68,7 +68,7 @@
             <p class="program-card__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="program-card__link" href="#">каталог pro</a>
           </div>
-          <h3 class="about-programs__headline section-headline">Как это работает</h3>
+          <h3 class="about-programs__headline section-headline section-headline--programs">Как это работает</h3>
           <ul class="about-programs__list advantages">
             <li class="advantages__item advantages__item--healthy">
               <span class="advantages__number">1</span>
@@ -108,17 +108,22 @@
               </div>
             </div>
             <div class="example__slder before-after">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./img/index/fat-cat-tablet.png, ./img/index/fat-cat-tablet@2x.png 2x" width="560" height="512">
-                <img class="before-after__image before-after__image--before" src="./img/index/fat-cat-mobile.png" srcset="./img/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот 'до'.">
-              </picture>
-              <div class="before-after__slider">
+              <div class="before-after__before">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/index/fat-cat-tablet.png, ./img/index/fat-cat-tablet@2x.png 2x" width="560" height="512">
+                  <img class="before-after__image before-after__image--before" src="./img/index/fat-cat-mobile.png" srcset="./img/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот 'до'.">
+                </picture>
+              </div>
+              <div class="before-after__after">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/index/slim-cat-tablet.png, ./img/index/slim-cat-tablet@2x.png 2x" width="560" height="512">
                   <img class="before-after__image before-after__image--after" src="./img/index/slim-cat-mobile.png" srcset="./img/index/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот 'после'.">
                 </picture>
-                <button class="before-after__button" type="button"><span class="visually-hidden">Сравнить.</span></button>
               </div>
+                <button class="before-after__button" type="button">
+                  <span class="visually-hidden">Сравнить.</span>
+                  <span class="before-after__button-elements"></span>
+                </button>
             </div>
           </div>
         </section>
@@ -146,7 +151,7 @@
         <div class="page-footer__wrapper">
           <a class="page-footer__logo-link" href="./index.html">
             <svg class="page-footer__logo-text" width="128" height="24">
-              <use href="./img/sprite.svg#text-logo-big"></use>
+              <use href="./img/sprite.svg#text-logo"></use>
             </svg>
           </a>
           <ul class="page-footer__social social-list">

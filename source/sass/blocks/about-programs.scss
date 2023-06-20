@@ -17,7 +17,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 80px;
+    row-gap: 73px;
     padding: 110px;
+    padding-top: 82px;
+    padding-bottom: 0;
   }
 }
 
@@ -48,12 +51,16 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 0;
   }
 }
 
-.about-programs__card:last-child {
+.about-programs__card:last-of-type {
   @media (min-width: v.$tablet-width) {
     margin-bottom: 45px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
   }
 }

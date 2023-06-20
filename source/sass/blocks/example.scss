@@ -9,7 +9,7 @@
   background-color: v.$section-bg;
 
   @media (min-width: v.$tablet-width) {
-    background: linear-gradient(to bottom, v.$background 0 60%, v.$section-bg 60% 100%);
+    background: linear-gradient(to bottom, v.$background 0 57.5%, v.$section-bg 57.5  % 100%);
   }
 
   @media (min-width: v.$desktop-width) {
@@ -30,7 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 71px 110px 75px;
+    padding: 21px 110px 70px;
   }
 }
 
@@ -43,11 +43,11 @@
   @media (min-width: v.$tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: v.$desktop-width) {
-    max-width: 436px;
+    max-width: 433px;
     margin-bottom: 69px;
   }
 }
@@ -57,5 +57,9 @@
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 99px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
   }
 }
