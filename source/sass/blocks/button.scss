@@ -50,6 +50,10 @@
   }
 }
 
+.button--food {
+  margin-top: 12px;
+}
+
 .button--more {
   background-color: v.$background-secondary;
   color: v.$secondary-text;
@@ -61,5 +65,12 @@
 
   &:active {
     color: rgba(v.$secondary-text, 0.3);
+  }
+}
+
+.button--extra {
+  @media (min-width: v.$desktop-width) {
+    max-width: 244px;
+    margin-left: 40px;
   }
 }

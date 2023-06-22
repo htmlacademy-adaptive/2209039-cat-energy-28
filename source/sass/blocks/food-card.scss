@@ -8,6 +8,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: v.$tablet-width) {
+    width: 100%;
+    padding: 22px 38px 39px;
+    background: linear-gradient(to bottom, transparent 0 80px, v.$background-secondary 80px 100%);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 27px 38px 39px;
+  }
+}
+
+.food-card--big {
+  @media (min-width: v.$tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .food-card::before {
@@ -18,6 +36,10 @@
   background-color: #ebebeb;
   top: 0;
   left: 0;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
 }
 
 .food-card:last-child::after {
@@ -28,11 +50,27 @@
   background-color: #ebebeb;
   bottom: 0;
   left: 0;
+
+  @media (min-width: v.$tablet-width) {
+    height: calc(100% - 82px);
+    width: calc(100% - 4px);
+    background-color: transparent;
+    border: 2px solid v.$background-secondary;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .food-card--show-more {
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: v.$tablet-width) {
+    position: relative;
+    gap: 0;
+    background: linear-gradient(to bottom, transparent 0 100%);
+  }
 }
 
 .food-card__image {
@@ -41,10 +79,42 @@
   &--big {
     margin: 10px 28px;
   }
+
+  @media (min-width: v.$tablet-width) {
+    margin: 0;
+    margin-top: 13px;
+
+    &--big {
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
 }
 
 .food-card__text {
   width: 50%;
+
+  @media (min-width: v.$tablet-width) {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: 37px;
+  }
+}
+
+.food-card__text--big {
+  @media (min-width: v.$tablet-width) {
+    margin-top: 21px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: 43px;
+  }
 }
 
 .food-card__name {
@@ -54,14 +124,35 @@
   text-transform: uppercase;
   max-width: 76px;
   margin-bottom: 14px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 130px;
+    text-align: center;
+  }
 }
 
 .food-card__name--more {
   @include m.link-reset;
   position: relative;
-  max-width: 100%;
-  padding-top: 78px;
+  text-align: center;
+  min-width: 100%;
+  margin-bottom: 0;
+  padding-top: 59px;
   padding-bottom: 8px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-top: 80px;
+    padding: 139px 35px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: 87px;
+    padding: 139px 16px;
+    padding-bottom: 18px;
+  }
 }
 
 .food-card__name--more::before,
@@ -74,6 +165,11 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: #d3d3d3;
+
+  @media (min-width: v.$tablet-width) {
+    height: 60px;
+    top: 30px;
+  }
 }
 
 .food-card__name--more::before {
@@ -107,12 +203,45 @@
   font-size: 12px;
   line-height: 16px;
   width: 50%;
+
+  @media (min-width: v.$tablet-width) {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+  }
+}
+
+.food-card__feature::before {
+  @media (min-width: v.$tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .food-card__feature--more {
   display: inline-block;
   width: fit-content;
   margin-bottom: 21px;
+
+  @media (min-width: v.$tablet-width) {
+    line-height: 18px;
+    text-align: center;
+    max-width: 165px;
+    margin-bottom: auto;
+  }
+}
+
+.food-card__feature--more::before {
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
 }
 
 .food-card__value {
@@ -122,4 +251,25 @@
   text-align: right;
   width: 50%;
   margin: 0;
+
+  @media (min-width: v.$tablet-width) {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+    justify-content: end;
+  }
+}
+
+.food-card__value::before {
+  @media (min-width: v.$tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+    bottom: 0;
+    left: 0;
+  }
 }

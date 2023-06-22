@@ -35,17 +35,19 @@
   position: relative;
   line-height: 36px;
   min-height: 104px;
-  padding: 20px 27px;
+  padding: 28px 19px;
   margin-bottom: 0;
 
   @media (min-width: v.$tablet-width) {
-    padding: 30px 65px;
-    min-height: 215px;
+    padding: 67px 30px;
+    min-height: 198px;
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 78px 110px;
-    min-height: 223px;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 203px;
+    padding: 83px 110px;
   }
 }
 

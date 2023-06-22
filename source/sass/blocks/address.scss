@@ -25,6 +25,14 @@
   }
 }
 
+.address--catalog {
+  background-color: v.$background-secondary;
+
+  @media (min-width: v.$desktop-width) {
+    background-color: v.$background;
+  }
+}
+
 .address__collaborate {
   font-weight: 400;
   font-size: 16px;
