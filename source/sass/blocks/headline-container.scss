@@ -1,0 +1,35 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.headline-container {
+  position: relative;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 43px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 100%;
+    min-height: 193px;
+  }
+}
+
+.headline-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: v.$decorate-color;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  @media (min-width: v.$desktop-width) {
+    top: 53%;
+  }
+}

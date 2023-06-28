@@ -64,3 +64,20 @@
     display: none;
   }
 }
+
+.section-headline--form {
+  line-height: 36px;
+  padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    line-height: 60px;
+    margin-bottom: 54px;
+    padding: 0 69px;
+    padding-top: 65px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 74px 110px;
+    margin-bottom: 56px;
+  }
+}

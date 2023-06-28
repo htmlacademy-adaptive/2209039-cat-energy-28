@@ -1,6 +1,7 @@
 @use "../variables.scss" as v;
 
 .button {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
   display: flex;
@@ -51,7 +52,7 @@
 }
 
 .button--food {
-  margin-top: 12px;
+  margin-top: auto;
 }
 
 .button--more {
@@ -72,5 +73,12 @@
   @media (min-width: v.$desktop-width) {
     max-width: 244px;
     margin-left: 40px;
+  }
+}
+
+.button--form {
+  @media (min-width: v.$tablet-width) {
+    max-width: 282px;
+    min-height: 52px;
   }
 }
