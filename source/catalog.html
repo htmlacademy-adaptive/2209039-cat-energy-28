@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalog: Кэт энерджи</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
@@ -17,12 +22,9 @@
                 <source media="(min-width: 768px)" srcset="./img/stack.svg#logo-tablet" width="60" height="50">
                 <img class="main-header__logo-icon" src="./img/stack.svg#logo-mobile" alt="Логотип CAT ENERGY." width="33" height="38">
               </picture>
-            </a>
-            <a href="./index.html">
-              <svg class="main-header__logo-text" width="101" height="18">
-                <use href="./img/sprite.svg#logo-text"></use>
-              </svg>
-            </a>
+              <a class="main-header__text-logo" href="./index.html">
+                <span class="visually-hidden">CAT ENERGY</span>
+              </a>
             <button class="main-header__toggle main-header__toggle--closed" type="button">
               <span class="visually-hidden">Меню</span>
             </button>
@@ -89,7 +91,7 @@
             <li class="catalog-cards__item food-card">
               <picture>
                 <source media="(min-width: 768px)" srcset="./img/catalog/catalog-3-tablet.png, ./img/catalog/catalog-3-tablet@2x.png 2x" width="161" height="172">
-                <img class="food-card__image" src="./img/catalog/catalog-3-mobile.png" srcset="./img/catalog/catalog-3-mobile@2x.png 2x" alt="Cat Energy: Рыба." width="68" height="86">
+                <img class="food-card__image food-card__image--fish" src="./img/catalog/catalog-3-mobile.png" srcset="./img/catalog/catalog-3-mobile@2x.png 2x" alt="Cat Energy: Рыба." width="68" height="86">
               </picture>
                 <div class="food-card__text">
                 <span class="food-card__name">Cat Energy PRO 500 г</span>
@@ -114,7 +116,7 @@
                 <span class="food-card__name">Cat Energy PRO 1000 г</span>
                 <dl class="food-card__poroperties">
                   <dt class="food-card__feature">Масса</dt>
-                  <dd class="food-card__value">500 г</dd>
+                  <dd class="food-card__value">1000 г</dd>
                   <dt class="food-card__feature">Вкус</dt>
                   <dd class="food-card__value">Рыба</dd>
                   <dt class="food-card__feature">Цена</dt>
@@ -126,7 +128,7 @@
             <li class="catalog-cards__item food-card">
               <picture>
                 <source media="(min-width: 768px)" srcset="./img/catalog/catalog-5-tablet.png, ./img/catalog/catalog-5-tablet@2x.png 2x" width="161" height="172">
-                <img class="food-card__image" src="./img/catalog/catalog-5-mobile.png" srcset="./img/catalog/catalog-5-mobile@2x.png 2x" alt="Cat Energy: Гречка" width="68" height="86">
+                <img class="food-card__image food-card__image--buckwheat" src="./img/catalog/catalog-5-mobile.png" srcset="./img/catalog/catalog-5-mobile@2x.png 2x" alt="Cat Energy: Гречка" width="68" height="86">
               </picture>
                 <div class="food-card__text">
                 <span class="food-card__name">Cat Energy SLIM 500 г</span>
@@ -163,7 +165,7 @@
             <li class="catalog-cards__item food-card">
               <picture>
                 <source media="(min-width: 768px)" srcset="./img/catalog/catalog-7-tablet.png, ./img/catalog/catalog-7-tablet@2x.png 2x" width="161" height="172">
-                <img class="food-card__image" src="./img/catalog/catalog-7-mobile.png" srcset="./img/catalog/catalog-7-mobile@2x.png 2x" alt="Cat Energy: Рис." width="68" height="86">
+                <img class="food-card__image food-card__image--rice" src="./img/catalog/catalog-7-mobile.png" srcset="./img/catalog/catalog-7-mobile@2x.png 2x" alt="Cat Energy: Рис." width="68" height="86">
               </picture>
                 <div class="food-card__text">
                 <span class="food-card__name">Cat Energy SLIM 500 г</span>
@@ -186,7 +188,7 @@
           </ul>
         </section>
         <section class="extra-products">
-            <div class="extra-products__headline-wrapper headline-container">
+            <div class="extra-products__headline-wrapper headline-container headline-container--extra-catalog">
               <h2 class="extra-products__headline">Дополнительные товары</h2>
             </div>
             <div class="extra-products__container">
@@ -250,9 +252,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo-link" href="./index.html">
-            <svg class="page-footer__logo-text" width="128" height="24">
-              <use href="./img/sprite.svg#text-logo"></use>
-            </svg>
+            <span class="visually-hidden">CAR ENERGY</span>
           </a>
           <ul class="page-footer__social social-list">
             <li class="social-list__item">

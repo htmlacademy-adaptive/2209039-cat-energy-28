@@ -129,7 +129,7 @@
   content: "";
   position: absolute;
   width: 15px;
-  height: 15px;
+  height: 16px;
   background-color: v.$main-text;
   mask-image: url("../../img/stack.svg#phone-icon");
   top: 50%;
@@ -269,6 +269,11 @@
   }
 }
 
+.form-section__radio:focus + .form-section__label--radio::before,
+.form-section__checkbox:focus + .form-section__label--checkbox::before {
+  border-color: #bababa;
+}
+
 .form-section__input--textarea {
   width: 100%;
   max-width: 1220px;
@@ -277,7 +282,7 @@
 
   @media (min-width: v.$tablet-width) {
     margin: 76px 0 65px;
-    padding-top: 9px;
+    padding: 9px 20px 0;
     height: 174px;
   }
 
@@ -288,7 +293,6 @@
 }
 
 .form-section--checkbox {
-  min-width: 1220px;
   gap: 13px;
   padding-bottom: 33px;
 
@@ -301,6 +305,8 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    width: 100%;
+    max-width: 1220px;
     padding-top: 58px;
     padding-bottom: 60px;
     grid-template-columns: repeat(4, 1fr);
@@ -369,7 +375,6 @@
 
 
 .form-section--button {
-  max-width: 1220px;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -384,6 +389,7 @@
   }
 
   @media (min-width: v.$desktop-width) {
+    max-width: 1220px;
     gap: 84px;
     padding: 0 0 84px;
   }

@@ -44,7 +44,12 @@
     align-items: center;
     border-left: none;
     border-right: none;
+    border-bottom: none;
   }
+}
+
+.extra__card:last-child {
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .extra__card::before {
@@ -59,16 +64,6 @@
   @media (min-width: v.$tablet-width) {
     display: none;
   }
-}
-
-.extra__card:last-child::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: #cdcdcd;
-  bottom: 0;
-  left: 0;
 }
 
 .extra__name {

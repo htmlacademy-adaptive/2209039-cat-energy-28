@@ -58,6 +58,41 @@
   }
 }
 
+.main-header__text-logo {
+  position: relative;
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: v.$desktop-width) {
+    width: 147px;
+    height: 21px;
+  }
+}
+
+.main-header__text-logo::before {
+  content: "";
+  position: absolute;
+  width: 101px;
+  height: 18px;
+  background-color: v.$main-text;
+  mask-image: url("../../img/stack.svg#text-logo");
+  transition-duration: 0.3s;
+
+  @media (min-width: v.$desktop-width) {
+    width: 147px;
+    height: 21px;
+  }
+}
+
+.main-header__text-logo:hover::before,
+.main-header__text-logo:focus::before {
+  background-color: #3e3e3e;
+}
+
+.main-header__text-logo:active::before {
+  background-color: #6b6b6b;
+}
+
 .main-header__logo-icon {
   object-fit: fill;
 }

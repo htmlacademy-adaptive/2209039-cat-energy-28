@@ -32,7 +32,8 @@
 
 .section-headline--programs {
   @media (min-width: v.$tablet-width) {
-    margin-bottom: 0;
+    margin: 0;
+    margin-right: auto;
   }
 }
 

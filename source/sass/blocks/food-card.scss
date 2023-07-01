@@ -13,7 +13,7 @@
   @media (min-width: v.$tablet-width) {
     width: 100%;
     padding: 22px 38px 39px;
-    background: linear-gradient(to bottom, transparent 0 80px, v.$background-secondary 80px 100%);
+    background: linear-gradient(to bottom, transparent 0 93px, v.$background-secondary 93px 100%);
     flex-direction: column;
     align-items: center;
     min-height: 511px;
@@ -56,7 +56,7 @@
   left: 0;
 
   @media (min-width: v.$tablet-width) {
-    height: calc(100% - 82px);
+    height: calc(100% - 96px);
     width: calc(100% - 4px);
     background-color: transparent;
     border: 2px solid v.$background-secondary;
@@ -92,6 +92,16 @@
       margin: 0;
       margin-top: 10px;
     }
+  }
+}
+
+.food-card__image--fish,
+.food-card__image--buckwheat,
+.food-card__image--rice {
+  margin-top: 22px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-top: 13px;
   }
 }
 

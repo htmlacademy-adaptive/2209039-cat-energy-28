@@ -43,6 +43,16 @@
   }
 }
 
+.about-programs__list {
+  @media (min-width: v.$tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: 0;
+  }
+}
+
 .about-programs__card {
   margin-bottom: 20px;
 

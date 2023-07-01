@@ -33,6 +33,13 @@
   }
 }
 
+.headline-container--extra-catalog {
+  @media (min-width: v.$desktop-width) {
+    margin-top: 75px;
+    margin-bottom: 76px;
+  }
+}
+
 .headline-container--comment,
 .headline-container--extra {
   min-height: 34px;

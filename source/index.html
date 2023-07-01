@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
@@ -18,10 +23,8 @@
                 <img class="main-header__logo-icon" src="./img/stack.svg#logo-mobile" alt="Логотип CAT ENERGY." width="33" height="38">
               </picture>
             </a>
-            <a href="./index.html">
-              <svg class="main-header__logo-text" width="101" height="18">
-                <use href="./img/sprite.svg#logo-text"></use>
-              </svg>
+            <a class="main-header__text-logo" href="./index.html">
+              <span class="visually-hidden">CAT ENERGY</span>
             </a>
             <button class="main-header__toggle main-header__toggle--closed" type="button">
               <span class="visually-hidden">Меню</span>
@@ -152,9 +155,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo-link" href="./index.html">
-            <svg class="page-footer__logo-text" width="128" height="24">
-              <use href="./img/sprite.svg#text-logo"></use>
-            </svg>
+            <span class="visually-hidden">CAR ENERGY</span>
           </a>
           <ul class="page-footer__social social-list">
             <li class="social-list__item">
