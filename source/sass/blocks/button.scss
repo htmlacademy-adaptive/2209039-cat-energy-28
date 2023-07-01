@@ -78,7 +78,13 @@
 
 .button--form {
   @media (min-width: v.$tablet-width) {
-    max-width: 282px;
+    font-size: 20px;
+    max-width: 283px;
+    min-height: 57px;
+  }
+
+  @media (min-width: v.$desktop-width) {
     min-height: 52px;
+    max-width: 568px;
   }
 }

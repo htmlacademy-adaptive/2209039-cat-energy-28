@@ -3,6 +3,7 @@
 
 .section-headline {
   @include m.indent-reset;
+  max-width: 1440px;
   margin-bottom: 39px;
   font-weight: 400;
   font-size: 36px;
@@ -12,6 +13,10 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto;
   }
 }
 
@@ -68,16 +73,17 @@
 .section-headline--form {
   line-height: 36px;
   padding: 0 20px;
+  padding-top: 27px;
 
   @media (min-width: v.$tablet-width) {
     line-height: 60px;
     margin-bottom: 54px;
     padding: 0 69px;
-    padding-top: 65px;
+    padding-top: 54px;
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 74px 110px;
+    padding: 69px 110px 0;
     margin-bottom: 56px;
   }
 }

@@ -6,6 +6,12 @@
   margin: 0 auto;
 }
 
+.main-from__description-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .main-from__description {
   display: inline-block;
   text-transform: uppercase;
@@ -15,9 +21,14 @@
   @media (min-width: v.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    max-width: 530px;
-    padding: 0 70px;
+    max-width: 612px;
+    padding: 0 111px;
     margin-bottom: 66px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: block;
+    margin-right: auto;
   }
 }
 
