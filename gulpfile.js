@@ -90,7 +90,8 @@ const stack = () => {
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*{.woff2,woff}',
+    'source/fonts/lato/*{.woff2,woff}',
+    'source/fonts/oswald/*{.woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
   ],{
@@ -138,6 +139,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
@@ -153,10 +155,11 @@ export const build = gulp.series(
 );
 
 export default gulp.series(
+  copy,
   styles,
   stack,
+  copyImages,
   gulp.series(
     server,
     watcher
 ));
-
