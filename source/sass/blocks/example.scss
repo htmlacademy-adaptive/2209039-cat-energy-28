@@ -1,0 +1,65 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.example {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: v.$section-bg;
+
+  @media (min-width: v.$tablet-width) {
+    background: linear-gradient(to bottom, v.$background 0 57.5%, v.$section-bg 57.5  % 100%);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    background: linear-gradient(to bottom, v.$background 0 25%, v.$section-bg 25% 100%);
+  }
+}
+
+.example__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 25px 20px 39px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 43px 30px 104px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 21px 110px 70px;
+  }
+}
+
+.example__text {
+  @include m.indent-reset;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+  color: v.$secondary-text;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 433px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__stats {
+  margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}

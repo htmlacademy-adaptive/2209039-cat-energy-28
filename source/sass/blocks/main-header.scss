@@ -1,0 +1,127 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+
+.main-header {
+  width: 100%;
+}
+
+.main-header__wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto;
+    padding: 55px 110px 0;
+    z-index: 1;
+  }
+}
+
+.main-header__topline {
+  min-height: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: v.$max-phone) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 60px;
+    justify-content: baseline;
+  }
+}
+
+.main-header__logo {
+  display: inline-block;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__text-logo {
+  position: relative;
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: v.$desktop-width) {
+    width: 147px;
+    height: 21px;
+  }
+}
+
+.main-header__text-logo::before {
+  content: "";
+  position: absolute;
+  width: 101px;
+  height: 18px;
+  background-color: v.$main-text;
+  mask-image: url("../../img/stack.svg#text-logo");
+  transition-duration: 0.3s;
+
+  @media (min-width: v.$desktop-width) {
+    width: 147px;
+    height: 21px;
+  }
+}
+
+.main-header__text-logo:hover::before,
+.main-header__text-logo:focus::before {
+  background-color: #3e3e3e;
+}
+
+.main-header__text-logo:active::before {
+  background-color: #6b6b6b;
+}
+
+.main-header__logo-icon {
+  object-fit: fill;
+}
+
+.main-header__logo-text {
+  @media (min-width: v.$tablet-width) {
+    margin-left: 13px;
+    width: 119px;
+    height: 22px;
+  }
+}
+
+.main-header__toggle {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__toggle--closed {
+  background-image: url("../../img/toggle-open.svg");
+}
+
+.main-header__toggle--opened {
+  background-image: url("../../img/toggle-close.svg");
+}

@@ -1,0 +1,113 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.stats {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  row-gap: 35px;
+
+  @media (max-width: v.$max-phone) {
+    justify-content: center;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    gap: 42px;
+    align-items: center;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 366px;
+    row-gap: 55px;
+  }
+}
+
+.stats__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 124px;
+  min-height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @media (min-width: v.$tablet-width) {
+    min-width: 162px;
+    min-height: 72px;
+  }
+}
+
+.stats__value {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  display: block;
+  margin: auto;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.stats__name {
+  position: absolute;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  max-width: 81px;
+  color: v.$secondary-text;
+  background-color: v.$section-bg;
+  bottom: -4px;
+  transform: translateY(50%);
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 114px;
+    background-color: v.$background;
+    bottom: 1px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    background-color: v.$section-bg;
+  }
+}
+
+.stats__name--big {
+  @media (min-width: v.$tablet-width) {
+    max-width: 142px;
+  }
+}
+
+.stats__results {
+  @include m.indent-reset;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: end;
+    max-width: 174px;
+    margin-left: auto;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

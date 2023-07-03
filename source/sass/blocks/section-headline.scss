@@ -1,0 +1,90 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.section-headline {
+  @include m.indent-reset;
+  max-width: 1440px;
+  margin-bottom: 39px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.section-headline--example {
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+.section-headline--programs {
+  @media (min-width: v.$tablet-width) {
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+.section-headline--catalog {
+  position: relative;
+  line-height: 36px;
+  min-height: 104px;
+  padding: 28px 19px;
+  margin-bottom: 0;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 67px 30px;
+    min-height: 198px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 203px;
+    padding: 83px 110px;
+  }
+}
+
+.section-headline--catalog::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  top: 0;
+  left: 0;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
+
+.section-headline--form {
+  line-height: 36px;
+  padding: 0 20px;
+  padding-top: 27px;
+
+  @media (min-width: v.$tablet-width) {
+    line-height: 60px;
+    margin-bottom: 54px;
+    padding: 0 69px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 69px 110px 0;
+    margin-bottom: 56px;
+  }
+}

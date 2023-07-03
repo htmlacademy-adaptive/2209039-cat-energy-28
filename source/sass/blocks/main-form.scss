@@ -1,0 +1,37 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.main-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-form__description-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-form__description {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+  padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 612px;
+    padding: 0 111px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.main-form__section {
+  width: 100%;
+}

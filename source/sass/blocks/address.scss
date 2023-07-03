@@ -1,0 +1,72 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.address {
+  width: 100%;
+  padding: 26px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: v.$background;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 59px 70px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    position: absolute;
+    padding: 58px 77px;
+    width: 565px;
+    top: 95px;
+    left: 49%;
+    transform: translateX(-105%);
+    z-index: 2;
+  }
+}
+
+.address--catalog {
+  background-color: v.$background-secondary;
+
+  @media (min-width: v.$desktop-width) {
+    background-color: v.$background;
+  }
+}
+
+.address__collaborate {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  max-width: 50%;
+  color: #111111;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 172px;
+  }
+}
+
+.address__location {
+  @include m.indent-reset;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+  max-width: 50%;
+  color: v.$secondary-text;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    text-align: right;
+    max-width: 160px;
+
+    &-city {
+      display: inline-block;
+      margin-top: 18px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    text-align: left;
+  }
+}

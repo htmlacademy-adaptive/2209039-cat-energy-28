@@ -1,0 +1,76 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.about-programs {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 49px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+    row-gap: 73px;
+    padding: 110px;
+    padding-top: 82px;
+    padding-bottom: 0;
+  }
+}
+
+.about-programs::before {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  left: 0;
+  bottom: 0;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: none;
+  }
+}
+
+.about-programs__list {
+  @media (min-width: v.$tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.about-programs__card {
+  margin-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.about-programs__card:last-of-type {
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}

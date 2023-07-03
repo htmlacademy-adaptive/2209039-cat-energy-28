@@ -1,0 +1,24 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.catalog-cards__list {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 30px 68px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+    row-gap: 51px;
+  }
+}

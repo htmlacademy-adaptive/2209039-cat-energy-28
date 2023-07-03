@@ -1,0 +1,104 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.extra {
+  @include m.list-reset;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 30px;
+    padding-top: 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: inline-flex;
+    width: 1036px;
+    padding-top: 0;
+    padding-left: 110px;
+    padding-bottom: 86px;
+  }
+}
+
+.extra__card {
+  position: relative;
+  padding: 13px 0 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 25px 38px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0;
+    row-gap: 24px;
+    border: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 15px 0 16px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+.extra__card:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra__card::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #cdcdcd;
+  top: 0;
+  left: 0;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
+
+.extra__name {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.extra__description {
+  @include m.indent-reset;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: v.$secondary-text;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    min-width: 285px;
+    margin-left: auto;
+  }
+}
+
+.extra__price {
+  @media (min-width: v.$tablet-width) {
+    margin-left: 49px;
+  }
+}

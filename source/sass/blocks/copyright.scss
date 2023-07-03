@@ -1,0 +1,45 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.copyright {
+  width: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 167px;
+  }
+}
+
+.copyright__link {
+  @include m.link-reset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  min-height: 34px;
+  color: v.$secondary-text;
+  transition-duration: 0.3s;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 34px;
+  top: 0;
+  right: 0;
+  mask-image: url("../../img/stack.svg#html-icon");
+  background-color: v.$mask-color;
+  transition-duration: 0.3s;
+}
+
+.copyright__link:hover::before,
+.copyright__link:focus::before {
+  background-color: v.$decorate-color;
+}

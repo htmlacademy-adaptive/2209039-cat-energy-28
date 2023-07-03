@@ -1,0 +1,99 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__headline-wrapper {
+  margin-bottom: 25px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.form__headline-wrapper--comment {
+  margin-bottom: 33px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__headline-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.form__headline {
+  @include m.indent-reset;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  width: fit-content;
+  max-width: 222px;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: #ffffff;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 30px;
+    margin-left: 40px;
+    max-width: 512px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 70px;
+    padding: 0 40px;
+  }
+}
+
+.form__headline--cat-contacts {
+  margin-top: 15px;
+  margin-bottom: auto;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 594px;
+    margin: 0;
+    margin-left: 30px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 90%;
+    margin-left: 70px;
+    padding: 0 40px;
+  }
+}
+
+.form__desktop-container {
+  @media (min-width: v.$desktop-width) {
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin: 0 auto;
+    padding: 0 110px 66px;
+  }
+}
+
+.form__container {
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__section {
+  @media (min-width: v.$tablet-width) {
+    margin: 0 68px;
+  }
+}

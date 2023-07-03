@@ -1,1 +1,33 @@
-// Начните писать стили здесь
+// базовые стили, шрифты, миксины, переменные
+@use "./base/base";
+@use "./base/fonts.scss";
+@use "./variables.scss";
+@use "./mixins.scss";
+
+// блоки
+@use "./blocks/main-header.scss";
+@use "./blocks/main-navigation.scss";
+@use "./blocks/button.scss";
+@use "./blocks/promo-section.scss";
+@use "./blocks/about-programs.scss";
+@use "./blocks/program-card.scss";
+@use "./blocks/advantages.scss";
+@use "./blocks/section-headline.scss";
+@use "./blocks/example.scss";
+@use "./blocks/stats.scss";
+@use "./blocks/before-after.scss";
+@use "./blocks/location.scss";
+@use "./blocks/address.scss";
+@use "./blocks/map.scss";
+@use "./blocks/page-footer.scss";
+@use "./blocks/social-list.scss";
+@use "./blocks/copyright.scss";
+@use "./blocks/catalog-cards.scss";
+@use "./blocks/food-card.scss";
+@use "./blocks/extra-products.scss";
+@use "./blocks/extra.scss";
+@use "./blocks/extra-gift.scss";
+@use "./blocks/headline-container.scss";
+@use "./blocks/main-form.scss";
+@use "./blocks/form.scss";
+@use "./blocks/form-section.scss";

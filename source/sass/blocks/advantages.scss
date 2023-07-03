@@ -1,0 +1,153 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.advantages {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 29px;
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-left: 80px;
+
+  @media (min-width: v.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    margin-bottom: 7px;
+    padding: 0;
+
+    :nth-child(even) {
+      margin-right: 75px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    justify-content: space-between;
+
+    :nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: v.$decorate-color;
+  top: 0;
+  left: 0;
+
+  @media (min-width: v.$tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item--healthy::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  mask-image: url("../../img/stack.svg#leaf-icon");
+  background-color: v.$background;
+  top: 16px;
+  left: 18px;
+
+  @media (min-width: v.$tablet-width) {
+    top: 27px;
+    left: 27px;
+  }
+}
+
+.advantages__item--fast::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  mask-image: url("../../img/stack.svg#water-icon");
+  background-color: v.$background;
+  top: 16px;
+  left: 17px;
+
+  @media (min-width: v.$tablet-width) {
+    top: 26px;
+    left: 27px;
+  }
+}
+
+.advantages__item--functional::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  mask-image: url("../../img/stack.svg#food-icon");
+  background-color: v.$background;
+  top: 16px;
+  left: 18px;
+
+  @media (min-width: v.$tablet-width) {
+    top: 25px;
+    left: 28px;
+  }
+}
+
+.advantages__item--changes::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  mask-image: url("../../img/stack.svg#clock-icon");
+  background-color: v.$background;
+  top: 16px;
+  left: 17px;
+
+  @media (min-width: v.$tablet-width) {
+    top: 25px;
+    left: 27px;
+  }
+}
+
+.advantages__number {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    position: absolute;
+    display: inline;
+    font-size: 280px;
+    line-height: 280px;
+    color: v.$background-secondary;
+    top: -40px;
+    left: 120px;
+  }
+}
+
+.advantages__text {
+  @include m.indent-reset;
+  font-family: "Lato", sans-serif;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 247px;
+    margin-top: 111px;
+    z-index: 1;
+  }
+}

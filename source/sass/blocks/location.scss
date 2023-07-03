@@ -1,0 +1,10 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
+.location {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

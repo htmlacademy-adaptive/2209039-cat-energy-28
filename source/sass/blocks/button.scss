@@ -1,0 +1,90 @@
+@use "../variables.scss" as v;
+
+.button {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  min-height: 40px;
+  color: v.$background;
+  background-color: v.$decorate-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #5eaa2f;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(v.$background, 0.3);
+  }
+}
+
+.button--promo {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: v.$max-phone) {
+    max-width: 280px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 244px;
+    min-height: 54px;
+    margin-left: 91px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 80px;
+  }
+}
+
+.button--food {
+  margin-top: auto;
+}
+
+.button--more {
+  background-color: v.$background-secondary;
+  color: v.$secondary-text;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(v.$secondary-text, 0.3);
+  }
+}
+
+.button--extra {
+  @media (min-width: v.$desktop-width) {
+    max-width: 244px;
+    margin-left: 40px;
+  }
+}
+
+.button--form {
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    max-width: 283px;
+    min-height: 57px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    min-height: 52px;
+    max-width: 568px;
+  }
+}
